@@ -1,0 +1,60 @@
+# Каталоги сборки
+build/
+build-*/
+out/
+cmake-build-*/
+.build/
+
+# Бинарные файлы
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+
+# Qt-файлы
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+*.moc
+*.qm
+
+# Временные файлы IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.cproject
+.settings/
+*.user
+*.autosave
+
+# Служебные файлы проекта
+REPORT.md
+COMMIT_MESSAGE.txt
+MR_DESCRIPTION.md
+prompt_*.md
+CLAUDE.md
+
+# Логи и временные файлы
+*.log
+*.tmp
+*.temp
+*.bak
+*.cache
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini

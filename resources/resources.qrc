@@ -1,0 +1,10 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/icons">
+        <!-- Иконки для панели инструментов и меню -->
+        <!-- Файлы иконок будут добавлены позже -->
+    </qresource>
+    <qresource prefix="/translations">
+        <!-- Файлы переводов будут добавлены позже -->
+    </qresource>
+</RCC>
