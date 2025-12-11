@@ -10,6 +10,25 @@
 #include "core/settings.h"
 #include "utils/logger.h"
 
+// Импорт плагинов Qt для статической сборки
+// Определение INCLINE3D_STATIC_QT устанавливается CMake при сборке со статическим Qt
+#ifdef INCLINE3D_STATIC_QT
+#include <QtPlugin>
+
+// Плагин платформы
+#ifdef Q_OS_WIN
+Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin)
+Q_IMPORT_PLUGIN(QWindowsVistaStylePlugin)
+#else
+Q_IMPORT_PLUGIN(QXcbIntegrationPlugin)
+#endif
+
+// Плагины форматов изображений
+Q_IMPORT_PLUGIN(QGifPlugin)
+Q_IMPORT_PLUGIN(QICOPlugin)
+Q_IMPORT_PLUGIN(QJpegPlugin)
+#endif // INCLINE3D_STATIC_QT
+
 int main(int argc, char* argv[]) {
     QApplication app(argc, argv);
 

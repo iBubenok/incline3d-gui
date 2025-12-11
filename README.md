@@ -76,7 +76,22 @@ cmake --install build --prefix /opt/incline3d
 | Опция | По умолчанию | Описание |
 |-------|--------------|----------|
 | `INCLINE3D_GUI_BUILD_TESTS` | `ON` | Собирать модульные тесты |
-| `INCLINE3D_LINK_CORE` | `OFF` | Линковать библиотеку primeincl_core |
+| `INCLINE3D_GUI_USE_CORE_LIB` | `OFF` | Линковать библиотеку primeincl_core |
+| `INCLINE3D_GUI_STATIC_QT` | `OFF` | Использовать статическую сборку Qt |
+
+### Статическая сборка
+
+Для создания автономного исполняемого файла без зависимости от установленного Qt см. документацию [STATIC_BUILD.md](STATIC_BUILD.md).
+
+```bash
+# Сборка со статическим Qt
+cmake -S . -B build-static \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_PREFIX_PATH=/path/to/qt6-static \
+    -DINCLINE3D_GUI_BUILD_TESTS=OFF
+
+cmake --build build-static --parallel
+```
 
 ## Использование
 
